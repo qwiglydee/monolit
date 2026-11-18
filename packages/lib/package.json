@@ -11,11 +11,13 @@
     ],
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "customElements": "custom-elements.json",
     "peerDependencies": {
         "@lit/context": "^1.1.6",
         "lit": "^3.3.3"
     },
     "devDependencies": {
+        "@custom-elements-manifest/analyzer": "^0.11.0",
         "@vitest/browser-playwright": "^5.1.0",
         "playwright": "^1.65.1",
         "typescript": "^7.0.2",
@@ -33,6 +35,7 @@
     "wireit": {
         "build": {
             "dependencies": [
+                "cem",
                 "tsc",
                 "tsc:types"
             ]
@@ -55,6 +58,12 @@
             ],
             "output": [
                 "dist/**.d.ts"
+            ]
+        },
+        "cem": {
+            "command": "cem analyze",
+            "files": [
+                "src/**/*.ts"
             ]
         }
     }

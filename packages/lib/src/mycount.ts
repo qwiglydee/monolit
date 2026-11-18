@@ -8,15 +8,13 @@ import {
 } from "lit";
 
 /**
- * Sample element.
- * Implements a button to click and a counter.
- *
- * @csspart button
+ * Classic button with a counter.
  */
 export class MyCount extends LitElement {
+    /** the counter of clicks */
     declare counter: number;
 
-    // @internal
+    /** @internal */
     static override properties: PropertyDeclarations = {
         counter: { type: Number, state: true },
     };
@@ -26,7 +24,7 @@ export class MyCount extends LitElement {
         this.counter = 0;
     }
 
-    // @internal
+    /** @internal */
     _increment() {
         this.counter += 1;
     }
@@ -38,7 +36,7 @@ export class MyCount extends LitElement {
         `;
     }
 
-    // @internal
+    /** @internal */
     static override styles: CSSResult = css`
         :host {
             display: block;

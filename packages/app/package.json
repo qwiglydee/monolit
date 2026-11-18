@@ -1,22 +1,26 @@
 {
-    "name": "@monolit/app",
-    "version": "0.0.1",
-    "description": "",
-    "type": "module",
-    "author": "QwiglyDee <qwiglydee@gmail.com>",
-    "license": "ISC",
-    "dependencies": {
-        "@monolit/lib": "^0.0.1",
-        "lit": "^3.3.3"
-    },
-    "devDependencies": {
-        "@lit-labs/rollup-plugin-minify-html-literals": "^0.2.0",
-        "@rollup/plugin-terser": "^1.0.2",
-        "vite": "^8.3.4"
-    },
-    "scripts": {
-        "dev": "vite --port 8000",
-        "build": "vite build",
-        "preview": "vite preview"
-    }
+  "name": "@monolit/app",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "author": "QwiglyDee <qwiglydee@gmail.com>",
+  "license": "ISC",
+  "main": "dist/myapp-main.js",
+  "customElements": "custom-elements.json",
+  "dependencies": {
+    "@monolit/lib": "^0.0.1",
+    "lit": "^3.3.3"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.11.0",
+    "@lit-labs/rollup-plugin-minify-html-literals": "^0.2.0",
+    "@rollup/plugin-terser": "^1.0.2",
+    "@wc-toolkit/cem-analyzer-plugin": "^1.0.2",
+    "vite": "^8.3.4"
+  },
+  "scripts": {
+    "dev": "vite --port 8000",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
 }

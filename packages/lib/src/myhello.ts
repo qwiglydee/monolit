@@ -11,15 +11,17 @@ import {
 /**
  * Element for greeting.
  * Renders a header with a greating.
+ *
+ * @cssprop --my-hello-size font size of the greeting
  */
 export class MyHello extends LitElement {
     /** (not reflected) whom to greet */
     declare whom: string;
 
-    /** compiled greeting */
+    /** @internal compiled greeting */
     declare greeting?: string;
 
-    // @internal
+    /** @internal */
     static override properties: PropertyDeclarations = {
         whom: { type: String, reflect: false },
         geeting: { type: String, state: true },
@@ -30,7 +32,7 @@ export class MyHello extends LitElement {
         this.whom = "World";
     }
 
-    // @internal
+    /** @internal */
     override update(changed: PropertyValues): void {
         if (changed.has("whom")) this.greeting = `Hello, ${this.whom}!`;
         super.update(changed);
@@ -40,9 +42,7 @@ export class MyHello extends LitElement {
         return html`<h1>${this.greeting}</h1>`;
     }
 
-    /** @cssprop --my-hello-size font size of the greeting */
-
-    // @internal
+    /** @internal */
     static override styles: CSSResult = css`
         :host {
             display: block;

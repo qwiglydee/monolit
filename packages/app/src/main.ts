@@ -1,6 +1,7 @@
 import { MyHello, MyCount } from "@monolit/lib";
-import { MyApp } from "./app";
+import { MyApp } from "./myapp";
 
-customElements.define("my-app", MyApp);
-customElements.define("my-hello", MyHello);
-customElements.define("my-counter", MyCount);
+customElements.define("our-app", MyApp);
+
+customElements.define("our-hello", class extends MyHello {});
+customElements.define("our-counter", class extends MyCount {});

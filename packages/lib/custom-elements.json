@@ -8,13 +8,8 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "Sample element.\nImplements a button to click and a counter.",
+          "description": "Classic button with a counter.",
           "name": "MyCount",
-          "cssParts": [
-            {
-              "name": "button"
-            }
-          ],
           "members": [
             {
               "kind": "field",
@@ -23,12 +18,9 @@
               "type": {
                 "text": "number"
               },
+              "description": "the counter of clicks",
               "default": "0",
               "attribute": "counter"
-            },
-            {
-              "kind": "method",
-              "name": "_increment"
             }
           ],
           "attributes": [
@@ -37,6 +29,7 @@
               "type": {
                 "text": "number"
               },
+              "description": "the counter of clicks",
               "default": "0",
               "fieldName": "counter"
             }
@@ -67,7 +60,7 @@
           "kind": "class",
           "description": "Element for greeting.\nRenders a header with a greating.",
           "name": "MyHello",
-          "cssParts": [
+          "cssProperties": [
             {
               "description": "font size of the greeting",
               "name": "--my-hello-size"
@@ -84,14 +77,6 @@
               "description": "(not reflected) whom to greet",
               "default": "\"World\"",
               "attribute": "whom"
-            },
-            {
-              "kind": "field",
-              "name": "greeting",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "compiled greeting"
             },
             {
               "kind": "field",

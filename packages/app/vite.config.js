@@ -3,6 +3,7 @@
 // import { playwright } from "@vitest/browser-playwright";
 import { defineConfig } from "vite";
 import minifyLit from "@lit-labs/rollup-plugin-minify-html-literals";
+import { cemAnalyzerPlugin } from "@wc-toolkit/cem-analyzer-plugin/vite";
 
 const basename = "myapp-";
 
@@ -19,5 +20,14 @@ export default defineConfig({
             },
         },
     },
-    plugins: [minifyLit()],
+    plugins: [
+        minifyLit(),
+        cemAnalyzerPlugin({
+            litelement: true,
+            globs: ["src/*.ts"],
+            // outdir: "dist", // doesn't work
+            dependencies: true,
+            packagejson: false,
+        }),
+    ],
 });

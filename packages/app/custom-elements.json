@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/main.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "anonymous_1",
+          "superclass": {
+            "name": "MyHello",
+            "package": "@monolit/lib"
+          },
+          "tagName": "our-hello",
+          "customElement": true,
+          "cssProperties": [
+            {
+              "description": "font size of the greeting",
+              "name": "--my-hello-size",
+              "inheritedFrom": {
+                "name": "MyHello",
+                "module": "src/myhello.ts"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "whom",
+              "type": {
+                "text": "string"
+              },
+              "description": "(not reflected) whom to greet",
+              "default": "\"World\"",
+              "fieldName": "whom",
+              "inheritedFrom": {
+                "name": "MyHello",
+                "module": "src/myhello.ts"
+              }
+            },
+            {
+              "name": "geeting",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "geeting",
+              "inheritedFrom": {
+                "name": "MyHello",
+                "module": "src/myhello.ts"
+              }
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "whom",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "(not reflected) whom to greet",
+              "default": "\"World\"",
+              "attribute": "whom",
+              "inheritedFrom": {
+                "name": "MyHello",
+                "module": "src/myhello.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "geeting",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "geeting",
+              "inheritedFrom": {
+                "name": "MyHello",
+                "module": "src/myhello.ts"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "description": "",
+          "name": "anonymous_2",
+          "superclass": {
+            "name": "MyCount",
+            "package": "@monolit/lib"
+          },
+          "tagName": "our-counter",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "description": "the counter of clicks",
+              "default": "0",
+              "fieldName": "counter",
+              "inheritedFrom": {
+                "name": "MyCount",
+                "module": "src/mycount.ts"
+              }
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "counter",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "description": "the counter of clicks",
+              "default": "0",
+              "attribute": "counter",
+              "inheritedFrom": {
+                "name": "MyCount",
+                "module": "src/mycount.ts"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "our-app",
+          "declaration": {
+            "name": "MyApp",
+            "module": "/src/myapp"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "our-hello",
+          "declaration": {
+            "name": "anonymous_1",
+            "module": "src/main.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "our-counter",
+          "declaration": {
+            "name": "anonymous_2",
+            "module": "src/main.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/myapp.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MyApp",
+          "members": [
+            {
+              "kind": "field",
+              "name": "who",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"w\"",
+              "attribute": "who"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "who",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"w\"",
+              "fieldName": "who"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "our-app",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyApp",
+          "declaration": {
+            "name": "MyApp",
+            "module": "src/myapp.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
