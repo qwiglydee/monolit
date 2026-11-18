@@ -1,0 +1,61 @@
+{
+    "name": "@monolit/lib",
+    "description": "Stuff",
+    "license": "ISC",
+    "author": "qwiglydee@gmail.com",
+    "version": "0.0.1",
+    "type": "module",
+    "sideEffects": false,
+    "files": [
+        "/dist/"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "peerDependencies": {
+        "@lit/context": "^1.1.6",
+        "lit": "^3.3.3"
+    },
+    "devDependencies": {
+        "@vitest/browser-playwright": "^5.1.0",
+        "playwright": "^1.65.1",
+        "typescript": "^7.0.2",
+        "vitest": "^5.1.0",
+        "vitest-browser-lit": "^1.0.1",
+        "wireit": "^0.15.0",
+        "rimraf": "^6.1.4"
+    },
+    "scripts": {
+        "test": "vitest run",
+        "test:ui": "vitest --browser.headless=false",
+        "build": "wireit",
+        "clean": "rimraf .wireit .vitest .testing build dist"
+    },
+    "wireit": {
+        "build": {
+            "dependencies": [
+                "tsc",
+                "tsc:types"
+            ]
+        },
+        "tsc": {
+            "command": "tsc --outdir ./dist --removeComments",
+            "files": [
+                "tsconfig.json",
+                "src/**/*.ts"
+            ],
+            "output": [
+                "dist/**/*.js"
+            ]
+        },
+        "tsc:types": {
+            "command": "tsc --outdir ./dist --declaration --emitDeclarationOnly",
+            "files": [
+                "tsconfig.json",
+                "src/**/*.ts"
+            ],
+            "output": [
+                "dist/**.d.ts"
+            ]
+        }
+    }
+}

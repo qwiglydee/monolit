@@ -1,0 +1,8 @@
+{
+    "quoteProps": "consistent",
+    "bracketSameLine": true,
+    "objectWrap": "preserve",
+    "trailingComma": "es5",
+    "htmlWhitespaceSensitivity": "css",
+    "xmlWhitespaceSensitivity": "ignore"
+}

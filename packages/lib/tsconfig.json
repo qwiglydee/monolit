@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "lib": ["ES2022", "DOM"],
+        "experimentalDecorators": false, // avoid the stuff whatsoever
+        "useDefineForClassFields": false,
+        /* modules */
+        "module": "es2022",
+        "moduleResolution": "bundler",
+        "rootDir": "./src",
+        "esModuleInterop": true,
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "auto",
+        /* checking */
+        "strict": true,
+        "skipLibCheck": true,
+        "strictNullChecks": false,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "isolatedModules": true,
+        /* emit */
+        "removeComments": false,
+        "stripInternal": true,
+        "importHelpers": false, // drop dependency on 'tslib'
+        //
+        "declaration": false,
+        "isolatedDeclarations": false,
+        //
+        "outDir": "build"
+    },
+    "include": ["src/**/*.ts"]
+}

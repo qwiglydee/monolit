@@ -1,0 +1,10 @@
+.*
+!.gitignore
+!.editorconfig
+!.prettierrc
+node_modules/
+build/
+dist/
+/var/
+package-lock.json
+

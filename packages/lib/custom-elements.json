@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/mycount.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Sample element.\nImplements a button to click and a counter.",
+          "name": "MyCount",
+          "cssParts": [
+            {
+              "name": "button"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "counter",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "counter"
+            },
+            {
+              "kind": "method",
+              "name": "_increment"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "counter"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyCount",
+          "declaration": {
+            "name": "MyCount",
+            "module": "src/mycount.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/myhello.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Element for greeting.\nRenders a header with a greating.",
+          "name": "MyHello",
+          "cssParts": [
+            {
+              "description": "font size of the greeting",
+              "name": "--my-hello-size"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "whom",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "(not reflected) whom to greet",
+              "default": "\"World\"",
+              "attribute": "whom"
+            },
+            {
+              "kind": "field",
+              "name": "greeting",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "compiled greeting"
+            },
+            {
+              "kind": "field",
+              "name": "geeting",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "geeting"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "whom",
+              "type": {
+                "text": "string"
+              },
+              "description": "(not reflected) whom to greet",
+              "default": "\"World\"",
+              "fieldName": "whom"
+            },
+            {
+              "name": "geeting",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "geeting"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyHello",
+          "declaration": {
+            "name": "MyHello",
+            "module": "src/myhello.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
