@@ -8,7 +8,7 @@ export class MyApp extends LitElement {
     protected override render(): unknown {
         return html`
             <my-hello whom=${this.who}></my-hello>
-            <my-counter></my-counter>
+            <slot></slot>
         `;
     }
 }

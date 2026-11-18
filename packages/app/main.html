@@ -5,12 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="data:" />
         <title>Preview</title>
-        <script type="module" src="src/index.ts"></script>
+        <script type="module" src="src/main.ts"></script>
     </head>
     <body>
-        <my-app who="you"></my-app>
-        <hr />
-        <my-hello whom="them"></my-hello>
-        <my-counter></my-counter>
+        <my-app who="you">
+            <my-counter></my-counter>
+        </my-app>
     </body>
 </html>
