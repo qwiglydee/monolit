@@ -1,13 +1,13 @@
 import { html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
 
-export class MyApp extends LitElement {
+export class OurApp extends LitElement {
     @property()
-    who = "w";
+    who = "world";
 
     protected override render(): unknown {
         return html`
-            <my-hello whom=${this.who}></my-hello>
+            <our-hello whom=${this.who}></our-hello>
             <slot></slot>
         `;
     }

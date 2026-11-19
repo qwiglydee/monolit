@@ -4,12 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="data:" />
-        <title>Preview</title>
-        <script type="module" src="src/main.ts"></script>
+        <title>Demo page</title>
+        <script type="module" src="src/index.ts"></script>
     </head>
     <body>
         <our-app who="you">
             <our-counter></our-counter>
         </our-app>
+        <script>
+            var our = {
+                app: document.querySelector("our-app"),
+                counter: document.querySelector("our-counter"),
+            };
+        </script>
     </body>
 </html>
